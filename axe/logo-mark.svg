@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  
+  <circle cx="60" cy="60" r="56" fill="#2C1A0E"></circle>
+  <circle cx="60" cy="60" r="40" fill="none" stroke="#D4A017" stroke-width="1.5" opacity="0.55"></circle>
+  <line x1="60" y1="22" x2="60" y2="98" stroke="#F2E2C8" stroke-width="1.2" opacity="0.45"></line>
+  <line x1="22" y1="60" x2="98" y2="60" stroke="#F2E2C8" stroke-width="1.2" opacity="0.45"></line>
+  <text x="60" y="76" text-anchor="middle" font-family="Fraunces, Georgia, serif" font-size="44" font-weight="700" fill="#D4A017">A</text>
+  <circle cx="60" cy="60" r="3.5" fill="#D4A017"></circle>
+</svg>

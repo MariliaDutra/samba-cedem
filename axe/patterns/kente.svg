@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" preserveAspectRatio="xMidYMid slice">
+  <rect width="240" height="240" fill="#FAF3E8"></rect>
+  <defs>
+    <pattern id="kente" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+      <polygon points="10,0 20,10 10,20 0,10" fill="#8C5A34" opacity="0.6"></polygon>
+      <polygon points="10,4 16,10 10,16 4,10" fill="#D4A017" opacity="0.7"></polygon>
+      <circle cx="10" cy="10" r="2" fill="#4A2E1A" opacity="0.5"></circle>
+    </pattern>
+  </defs>
+  <rect width="240" height="240" fill="url(#kente)"></rect>
+</svg>

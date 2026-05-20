@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" preserveAspectRatio="xMidYMid slice">
+  <rect width="240" height="240" fill="#FAF3E8"></rect>
+  <defs>
+    <pattern id="bogolan" x="0" y="0" width="32" height="32" patternUnits="userSpaceOnUse">
+      
+      <rect x="0" y="0" width="32" height="32" fill="#FAF3E8"></rect>
+      <polygon points="0,0 16,0 8,14" fill="#4A2E1A"></polygon>
+      <polygon points="16,32 32,32 24,18" fill="#4A2E1A"></polygon>
+      <rect x="14" y="14" width="4" height="4" fill="#8C5A34"></rect>
+      <line x1="0" y1="16" x2="32" y2="16" stroke="#4A2E1A" stroke-width="0.6" opacity="0.4"></line>
+      <circle cx="2" cy="22" r="1" fill="#4A2E1A" opacity="0.6"></circle>
+      <circle cx="30" cy="10" r="1" fill="#4A2E1A" opacity="0.6"></circle>
+    </pattern>
+  </defs>
+  <rect width="240" height="240" fill="url(#bogolan)"></rect>
+</svg>

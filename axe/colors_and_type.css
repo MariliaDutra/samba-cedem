@@ -1,0 +1,302 @@
+/* ============================================================
+   Axé Design System — Colors & Type (consolidated)
+   ============================================================
+   This file consolidates color + typography tokens into a single
+   import for design artifacts. It re-exports the foundational
+   variables from tokens/* and adds SEMANTIC tokens (fg1, fg2,
+   bg, h1, h2, h3, body, code) so downstream files can stay
+   product-agnostic.
+
+   For full token coverage (spacing, radii, shadows, orixá
+   palette) import tokens/tokens.css directly.
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,700;1,9..144,300;1,9..144,500&display=swap');
+
+/* Space Grotesk — local brand files */
+@font-face {
+  font-family: 'Space Grotesk';
+  src: url('fonts/SpaceGrotesk-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Space Grotesk';
+  src: url('fonts/SpaceGrotesk-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Space Grotesk';
+  src: url('fonts/SpaceGrotesk-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Space Grotesk';
+  src: url('fonts/SpaceGrotesk-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Space Grotesk';
+  src: url('fonts/SpaceGrotesk-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /* ── COLORS ─────────────────────────────────────────── */
+  /* Família Terra (paleta principal — ocres, barros, mogno) */
+  --terra-900: #2C1A0E;   /* Noite de Terra */
+  --terra-800: #4A2E1A;   /* Terra Profunda */
+  --terra-700: #6B4226;
+  --terra-600: #8C5A34;   /* Barro */
+  --terra-500: #A97040;
+  --terra-400: #C4884A;   /* Ocre Quente */
+  --terra-300: #D4A872;
+  --terra-200: #E8CBA0;
+  --terra-100: #F2E2C8;
+  --terra-50:  #FAF3E8;
+
+  /* Família Ocre (destaque / dourado — ferramentas sagradas) */
+  --ocre-600: #B8860B;
+  --ocre-400: #D4A017;   /* Ouro Velho — cor de destaque */
+  --ocre-200: #EDD890;
+
+  /* Família Musgo (Ossain, Oxóssi, mata) */
+  --musgo-700: #2D4A2D;
+  --musgo-500: #4A7C59;
+  --musgo-300: #7FAF8C;
+  --musgo-100: #C8E0CB;
+
+  /* Família Mogno (profundidade, Xangô) */
+  --mogno-800: #3D1F1F;
+  --mogno-500: #7C3D3D;
+  --mogno-300: #B87070;
+  --mogno-100: #E8C8C8;
+
+  /* Família Cobre */
+  --cobre-500: #8B4513;
+  --cobre-400: #A0522D;
+  --cobre-300: #CD853F;
+
+  /* Neutros quentes */
+  --areia: #F5ECD7;    /* fundo principal */
+  --palha: #EDE0C4;    /* fundo claro / sobre escuro */
+
+  /* ── SEMANTIC COLOR TOKENS ──────────────────────────── */
+  --bg:       var(--areia);
+  --bg-elev:  #FFFFFF;
+  --bg-dark:  var(--terra-900);
+  --fg1:      var(--terra-900);  /* primary text */
+  --fg2:      var(--terra-700);  /* body text */
+  --fg3:      var(--terra-500);  /* muted text, captions */
+  --fg-on-dark: var(--palha);
+  --accent:   var(--ocre-400);   /* Ouro Velho */
+  --accent-hover: var(--ocre-600);
+  --success:  var(--musgo-500);
+  --warning:  var(--ocre-400);
+  --danger:   var(--mogno-500);
+  --border:   var(--terra-200);
+  --border-strong: var(--terra-600);
+
+  /* ── ORIXÁ PALETTES ─────────────────────────────────── */
+  /* Each orixá has bg / border / text / accent-bar; use for
+     categorizing aulas, módulos, posts e seções temáticas. */
+  --orixa-exu-bg:        #FAF3E8;
+  --orixa-exu-border:    #D4A872;
+  --orixa-exu-text:      #4A2E1A;
+  --orixa-exu-bar:       linear-gradient(90deg, #2C1A0E, #7C3D3D);
+
+  --orixa-ogum-bg:       #C0392B;
+  --orixa-ogum-border:   #7C0A0A;
+  --orixa-ogum-text:     #FFF8EB;
+  --orixa-ogum-bar:      linear-gradient(90deg, #7C0A0A, #E64A2E);
+
+  --orixa-xango-bg:      #F5EDE8;
+  --orixa-xango-border:  #B87070;
+  --orixa-xango-text:    #3D1F1F;
+  --orixa-xango-bar:     linear-gradient(90deg, #3D1F1F, #D4A017);
+
+  --orixa-oxossi-bg:     #C8E0CB;
+  --orixa-oxossi-border: #7FAF8C;
+  --orixa-oxossi-text:   #2D4A2D;
+  --orixa-oxossi-bar:    linear-gradient(90deg, #2D4A2D, #7FAF8C);
+
+  --orixa-oxum-bg:       #D4DEEC;
+  --orixa-oxum-border:   #5878A8;
+  --orixa-oxum-text:     #0E2347;
+  --orixa-oxum-bar:      linear-gradient(90deg, #0E2347, #5878A8);
+
+  --orixa-iansa-bg:      #FAE8D0;
+  --orixa-iansa-border:  #D4751F;
+  --orixa-iansa-text:    #8B3A1A;
+  --orixa-iansa-bar:     linear-gradient(90deg, #D4A017, #C24A1A);
+
+  --orixa-iemanja-bg:    #E8F0F8;
+  --orixa-iemanja-border:#8AB4D4;
+  --orixa-iemanja-text:  #1C4A7A;
+  --orixa-iemanja-bar:   linear-gradient(90deg, #1C4A7A, #8AB4D4);
+
+  /* ── TYPE ───────────────────────────────────────────── */
+  --font-display: 'Fraunces', Georgia, 'Times New Roman', serif;
+  --font-body:    'Space Grotesk', system-ui, -apple-system, sans-serif;
+  --font-mono:    'Courier New', Courier, monospace;
+
+  /* Type scale */
+  --text-xs:   0.65rem;   /* 10.4px — captions / labels */
+  --text-sm:   0.75rem;   /* 12px   — notas */
+  --text-base: 0.9rem;    /* 14.4px — body */
+  --text-md:   1rem;      /* 16px */
+  --text-lg:   1.2rem;    /* 19.2px — headings */
+  --text-xl:   1.5rem;    /* 24px   — display medium */
+  --text-2xl:  2rem;      /* 32px   — display large */
+  --text-3xl:  2.8rem;    /* 44.8px — hero */
+
+  /* ── RADII / SPACING / SHADOW (re-exported) ─────────── */
+  --radius-xs:   2px;
+  --radius-sm:   4px;
+  --radius-md:   8px;
+  --radius-lg:  16px;
+  --radius-xl:  24px;
+  --radius-pill: 999px;
+
+  --shadow-sm:  0 1px 3px rgba(44, 26, 14, 0.08);
+  --shadow-md:  0 4px 12px rgba(44, 26, 14, 0.12);
+  --shadow-lg:  0 8px 24px rgba(44, 26, 14, 0.16);
+
+  --transition-fast:   0.12s ease;
+  --transition-normal: 0.2s ease;
+  --transition-slow:   0.35s ease;
+
+  /* ── SPACING SCALE ──────────────────────────────────── */
+  --space-1:  0.25rem;  /*  4px */
+  --space-2:  0.5rem;   /*  8px */
+  --space-3:  0.75rem;  /* 12px */
+  --space-4:  1rem;     /* 16px */
+  --space-5:  1.25rem;  /* 20px */
+  --space-6:  1.5rem;   /* 24px */
+  --space-8:  2rem;     /* 32px */
+  --space-10: 2.5rem;   /* 40px */
+  --space-12: 3rem;     /* 48px */
+  --space-16: 4rem;     /* 64px */
+
+  /* ── BORDER SHORTHANDS ──────────────────────────────── */
+  --border-subtle:  1px solid rgba(44, 26, 14, 0.1);
+  --border-light:   1px solid var(--terra-200);
+  --border-normal:  1px solid var(--terra-300);
+  --border-strong:  1.5px solid var(--terra-600);
+}
+
+/* ============================================================
+   SEMANTIC TYPE CLASSES — drop-in for documents and articles
+   ============================================================ */
+
+.h1, h1.axe {
+  font-family: var(--font-display);
+  font-size: var(--text-3xl);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--terra-800);
+}
+
+.h2, h2.axe {
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+  color: var(--terra-800);
+}
+
+.h3, h3.axe {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-weight: 500;
+  line-height: 1.3;
+  color: var(--terra-800);
+}
+
+.h4, h4.axe {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  font-weight: 500;
+  line-height: 1.35;
+  color: var(--terra-700);
+}
+
+.eyebrow {
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-weight: 500;
+  color: var(--terra-600);
+}
+
+.lede {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  font-style: italic;
+  font-weight: 300;
+  line-height: 1.5;
+  color: var(--terra-600);
+}
+
+.body, p.axe {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  font-weight: 400;
+  line-height: 1.7;
+  color: var(--terra-700);
+}
+
+.caption {
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 300;
+  color: var(--terra-500);
+}
+
+.code, code.axe {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  color: var(--terra-600);
+  background: var(--terra-50);
+  padding: 0.1em 0.35em;
+  border-radius: var(--radius-xs);
+}
+
+/* Ancestral blockquote — citações de tradição oral */
+blockquote.ancestral {
+  border-left: 3px solid var(--ocre-400);
+  padding: 1rem 1.5rem;
+  background: var(--terra-50);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  margin: 1.5rem 0;
+}
+blockquote.ancestral p {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: var(--text-lg);
+  font-weight: 300;
+  color: var(--terra-700);
+  line-height: 1.5;
+}
+blockquote.ancestral cite {
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--terra-500);
+  font-style: normal;
+}
